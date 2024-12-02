@@ -12,12 +12,11 @@ export default function AboutPage() {
       <Header />
       <main className="flex-grow">
         <AboutContent />
-        <ProjectsGallery />
         <UserFlow />
+        <ProjectsGallery />
       </main>
       <CallToAction />
       <Faq />
-     
       <Footer />
      
     </div>

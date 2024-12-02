@@ -4,7 +4,6 @@ export default function AboutContent() {
   return (
     <>
      
-
       {/* Content Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-6 lg:px-12">
@@ -30,43 +29,6 @@ export default function AboutContent() {
                 className="absolute top-0 left-0 w-full h-full"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 lg:px-12">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Our Comprehensive Services</h2>
-          <p className="text-lg text-center mb-12 text-gray-600">
-            We offer a full range of home renovation and remodeling services to transform your space
-          </p>
-          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-5">
-            {[
-              'Kitchen Remodeling',
-              'Bathroom Remodeling',
-              'Cabinetry Selection & Installation',
-              'Backsplash Design & Installation',
-              'Granite & Solid Surface Countertops',
-              'Plumbing Fixture Selection',
-              'Appliance Selection & Installation',
-              'Flooring Selection & Installation',
-              'Door Selection & Installation',
-              'Window Replacement',
-              'Stucco & Plastering',
-              'Custom Home Additions',
-              'Architectural Services',
-              'Electrical Services',
-              'Drywall Services'
-            ].map((service, index) => (
-              <div 
-                key={index} 
-                className="p-6 bg-gray-50 rounded-sm"
-              >
-                <h3 className="text-lg text-center font-bold text-gray-800 mb-auto">{service}</h3>
-                
-              </div>
-            ))}
           </div>
         </div>
       </section>
