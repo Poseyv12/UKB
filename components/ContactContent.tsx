@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormItem, FormLabel, FormMessage, FormField } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import ReCAPTCHA from "react-google-recaptcha"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -25,7 +24,6 @@ const formSchema = z.object({
 export default function ContactContent() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
-  const [captchaVerified, setCaptchaVerified] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,26 +35,13 @@ export default function ContactContent() {
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!captchaVerified) {
-      setSubmitMessage("Please complete the CAPTCHA before submitting.")
-      return
-    }
-
     setIsSubmitting(true)
-    // Simulate form submission
     setTimeout(() => {
       console.log(values)
       setSubmitMessage('Thank you for your message. We will get back to you soon!')
       setIsSubmitting(false)
       form.reset()
-      setCaptchaVerified(false)
     }, 2000)
-  }
-
-  function handleCaptcha(value: string | null) {
-    if (value) {
-      setCaptchaVerified(true)
-    }
   }
 
   return (
@@ -124,15 +109,9 @@ export default function ContactContent() {
                       </FormItem>
                     )}
                   />
-                  <div className="mt-4 overflow-x-auto">
-                    <ReCAPTCHA
-                      sitekey="your-recaptcha-site-key"
-                      onChange={handleCaptcha}
-                    />
-                  </div>
                   <Button 
                     type="submit" 
-                    disabled={isSubmitting || !captchaVerified}
+                    disabled={isSubmitting}
                     className="w-full sm:w-auto"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
