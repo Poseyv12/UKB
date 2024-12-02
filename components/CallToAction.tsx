@@ -14,7 +14,7 @@ export default function CallToAction() {
           Ready to Transform Your Space?
         </h2>
         <p className="text-xl text-white mb-8">
-          Let's bring your dream kitchen or bathroom to life!
+          Let&apos;s bring your dream kitchen or bathroom to life!
         </p>
         <Button 
           asChild 

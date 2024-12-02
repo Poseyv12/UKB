@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import Image from 'next/image';
 
 const reasons = [
   "20+ Years of Experience in Kitchen & Bath Remodeling",
@@ -35,7 +36,7 @@ export default function WhyChooseUs() {
           Why Choose Ultimate Kitchen & Bath
         </h2>
         <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-          At Ultimate Kitchen & Bath, we're committed to turning your dream spaces into reality. Our expertise, attention to detail, and customer-first approach set us apart in the world of home renovations.
+          At Ultimate Kitchen & Bath, we&apos;re committed to turning your dream spaces into reality. Our expertise, attention to detail, and customer-first approach set us apart in the world of home renovations.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {reasons.map((reason, index) => (
@@ -60,10 +61,11 @@ export default function WhyChooseUs() {
           <div className="flex justify-center items-center gap-8">
             {awards.map((award, index) => (
               <a key={index} href={award.link} target="_blank" rel="noopener noreferrer" className="block">
-                <img
+                <Image
                   src={award.src}
                   alt={award.alt}
-                  className="h-32 object-contain hover:scale-105 transition-transform duration-300"
+                  width={300}
+                  height={300}
                 />
               </a>
             ))}

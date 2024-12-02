@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -26,8 +25,6 @@ const galleryItems = {
 }
 
 export default function GalleryContent() {
-  const [activeTab, setActiveTab] = useState('kitchen')
-
   return (
     <>
       {/* Hero Section */}
@@ -49,7 +46,7 @@ export default function GalleryContent() {
       {/* Gallery Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <Tabs defaultValue="kitchen" className="w-full" onValueChange={setActiveTab}>
+          <Tabs defaultValue="kitchen" className="w-full">
             <TabsList className="grid w-full grid-cols-3 bg-gray-100">
               <TabsTrigger 
                 value="kitchen"

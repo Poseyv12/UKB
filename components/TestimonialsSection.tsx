@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 const testimonials = [
   {
@@ -31,19 +31,19 @@ export default function TestimonialsSection() {
   const [isAnimating, setIsAnimating] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     if (!isAnimating) {
       setIsAnimating(true)
       setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
     }
-  }
+  }, [isAnimating])
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (!isAnimating) {
       setIsAnimating(true)
       setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))
     }
-  }
+  }, [isAnimating])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,13 +55,10 @@ export default function TestimonialsSection() {
 
   useEffect(() => {
     if (!isPaused) {
-      const interval = setInterval(() => {
-        handleNext()
-      }, 5000)
-
+      const interval = setInterval(handleNext, 5000)
       return () => clearInterval(interval)
     }
-  }, [isPaused])
+  }, [isPaused, handleNext])
 
   return (
     <section className="py-8 md:py-16 bg-gradient-to-b from-white to-white-500">
@@ -100,7 +97,7 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <p className="text-sm md:text-base text-gray-600 text-center italic mb-4 md:mb-6">
-                  "{testimonials[currentIndex].text}"
+                  &ldquo;{testimonials[currentIndex].text}&rdquo;
                 </p>
                 <h3 className="text-base md:text-lg font-bold text-gray-800">
                   {testimonials[currentIndex].name}

@@ -23,10 +23,10 @@ export default function FAQ() {
 
             <AccordionItem value="item-2">
               <AccordionTrigger>
-                What's the cost of kitchen and bathroom remodeling in Boca Raton?
+                What&apos;s the cost of kitchen and bathroom remodeling in Boca Raton?
               </AccordionTrigger>
               <AccordionContent>
-                As top-rated kitchen designers in Boca Raton, we offer options for every budget. Bathroom renovations typically range from $10,000 for basic updates to $50,000+ for high-end bathroom remodeling. Modern kitchen remodeling in Boca Raton ranges from $25,000 to $100,000+ for luxury kitchen remodels. Costs vary based on materials, scope, and whether you're choosing custom cabinetry, countertop installation, or complete plumbing renovation.
+                As top-rated kitchen designers in Boca Raton, we offer options for every budget. Bathroom renovations typically range from $10,000 for basic updates to $50,000+ for high-end bathroom remodeling. Modern kitchen remodeling in Boca Raton ranges from $25,000 to $100,000+ for luxury kitchen remodels. Costs vary based on materials, scope, and whether you&apos;re choosing custom cabinetry, countertop installation, or complete plumbing renovation.
               </AccordionContent>
             </AccordionItem>
 
@@ -35,7 +35,7 @@ export default function FAQ() {
                 What types of kitchen and bathroom remodeling services do you offer in Boca Raton?
               </AccordionTrigger>
               <AccordionContent>
-                As Boca Raton kitchen and bath experts, we provide comprehensive services including custom kitchen design, contemporary bathroom renovation, shower and tub upgrades, tile and flooring installation, and energy-efficient kitchen upgrades. Whether you're interested in an open concept kitchen remodel or a bathroom remodel with walk-in shower, our South Florida kitchen and bath remodeling team handles everything from design to completion.
+                As Boca Raton kitchen and bath experts, we provide comprehensive services including custom kitchen design, contemporary bathroom renovation, shower and tub upgrades, tile and flooring installation, and energy-efficient kitchen upgrades. Whether you&apos;re interested in an open concept kitchen remodel or a bathroom remodel with walk-in shower, our South Florida kitchen and bath remodeling team handles everything from design to completion.
               </AccordionContent>
             </AccordionItem>
 
@@ -44,7 +44,7 @@ export default function FAQ() {
                 Why choose Ultimate Kitchen & Bath for your Boca Raton remodeling project?
               </AccordionTrigger>
               <AccordionContent>
-                As the best kitchen remodelers in Boca Raton, we combine expertise with personalized service. Our Boca Raton bathroom designers and kitchen experts specialize in both small kitchen renovation ideas and luxury remodels. We're known for quality craftsmanship, transparent pricing, and exceptional customer service. From custom cabinetry to complete home remodeling in Boca Raton, we're your trusted local contractor.
+                As the best kitchen remodelers in Boca Raton, we combine expertise with personalized service. Our Boca Raton bathroom designers and kitchen experts specialize in both small kitchen renovation ideas and luxury remodels. We&apos;re known for quality craftsmanship, transparent pricing, and exceptional customer service. From custom cabinetry to complete home remodeling in Boca Raton, we&apos;re your trusted local contractor.
               </AccordionContent>
             </AccordionItem>
 

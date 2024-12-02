@@ -5,7 +5,15 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['images.unsplash.com', 'plus.unsplash.com', 'i.pravatar.cc', 'ultimate-kitchen-bath.vercel.app'],
+    domains: [
+      'images.unsplash.com',
+      'plus.unsplash.com',
+      'i.pravatar.cc',
+      'ultimate-kitchen-bath.vercel.app',
+      'encrypted-tbn0.gstatic.com',
+      'www.grsmgt.com',
+      'syzygyglobal.com'
+    ],
     remotePatterns: [
       {
         protocol: 'https',
@@ -22,6 +30,24 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'i.pravatar.cc',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn0.gstatic.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.grsmgt.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'syzygyglobal.com',
         port: '',
         pathname: '/**',
       },

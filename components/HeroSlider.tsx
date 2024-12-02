@@ -51,7 +51,7 @@ export default function HeroSlider() {
             Kitchen & Bath Remodeling Experts
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-white mb-8">
-            Transform Your Home with South Florida's Most Trusted Kitchen and Bathroom Renovation Specialists
+            Transform Your Home with South Florida&apos;s Most Trusted Kitchen and Bathroom Renovation Specialists
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300">
