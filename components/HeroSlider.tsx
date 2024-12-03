@@ -55,7 +55,7 @@ export default function HeroSlider() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300">
-              Free Design Consultation
+              Complimetery Design Consultation
             </button>
          
           </div>

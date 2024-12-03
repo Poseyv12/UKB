@@ -4,12 +4,16 @@ import { Button } from "@/components/ui/button"
 export default function CallToAction() {
   return (
     <section
-      className="bg-fixed bg-cover bg-center py-16"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80')`,
-      }}
+      className="relative py-16 overflow-hidden"
     >
-      <div className="container mx-auto px-4 text-center bg-black bg-opacity-50 py-12">
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center transform scale-105"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80')`,
+        }}
+      />
+      
+      <div className="relative container mx-auto px-4 text-center bg-black bg-opacity-50 py-12">
         <h2 className="text-3xl font-bold text-white mb-4">
           Ready to Transform Your Space?
         </h2>
