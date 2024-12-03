@@ -60,12 +60,19 @@ export default function WhyChooseUs() {
         <div className="mt-16">
           <div className="flex justify-center items-center gap-8">
             {awards.map((award, index) => (
-              <a key={index} href={award.link} target="_blank" rel="noopener noreferrer" className="block">
+              <a 
+                key={index} 
+                href={award.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block w-[150px] h-[100px] relative"
+              >
                 <Image
                   src={award.src}
                   alt={award.alt}
-                  width={300}
-                  height={300}
+                  fill
+                  className="object-contain"
+                  sizes="150px"
                 />
               </a>
             ))}

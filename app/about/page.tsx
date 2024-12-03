@@ -18,7 +18,6 @@ export default function AboutPage() {
       <CallToAction />
       <Faq />
       <Footer />
-     
     </div>
   )
 }
