@@ -32,30 +32,6 @@ export default function AboutContent() {
           </div>
         </div>
       </section>
-      <div className="mt-16">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Meet Our Kitchen & Bath Design Team</h2>
-        <p className="text-lg text-center mb-12 text-gray-600">
-          Our award-winning team of designers and renovation experts is passionate about creating your dream space. 
-        </p>
-        <div className="grid md:grid-cols-3 gap-12">
-          {['John Doe', 'Jane Smith', 'Mike Johnson'].map((name, index) => (
-            <div key={index} className="text-center">
-              <div className="relative w-32 h-32 lg:w-40 lg:h-40 mx-auto mb-4">
-                <Image
-                  src={`https://i.pravatar.cc/200?img=${index + 1}`}
-                  alt={name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="shadow-lg"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{name}</h3>
-              <p className="text-gray-600">Lead Designer</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      
     </>
   )
 }

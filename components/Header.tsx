@@ -58,8 +58,8 @@ export default function Header() {
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden bg-gray-100 hover:bg-gray-200 text-black font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-              <Menu className="h-6 w-6" />
+            <Button variant="outline" size="icon" className="md:hidden bg-gray-100 hover:bg-gray-200 text-black font-bold transition-all duration-300">
+              <Menu className="h-20 w-20" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
@@ -69,7 +69,6 @@ export default function Header() {
             </SheetHeader>
             <nav className="flex flex-col space-y-4 mt-6">
               <Link href="/" className="text-gray-600 hover:text-gray-800 flex items-center">
-                
                 Home
               </Link>
               <Link href="/about" className="text-gray-600 hover:text-gray-800">
