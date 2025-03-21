@@ -2,6 +2,12 @@ import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import BlogPost from '../../../components/BlogPost';
 import { supabase } from '../../../lib/supabaseClient';
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Blog - Ultimate Kitchen & Bath',
+  description: 'Read our blog for tips, tricks, and insights on kitchen and bath remodeling in Boca Raton, FL.',
+}
 
 interface BlogPostPageProps {
   params: Promise<{ postid: string }>;

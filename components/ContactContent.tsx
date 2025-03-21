@@ -130,10 +130,10 @@ export default function ContactContent() {
                 
               </p>
               <p className="mb-4 text-sm sm:text-base">
-                Phone: (555) 123-4567<br />
-                Email: info@ultimatekb.com
+                Phone: (561) 998-7711<br />
+                Email: ultimatekbinc@aol.com
               </p>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Hours</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">Hours (By Appointment Only)</h3>
               <p className="mb-4 text-sm sm:text-base">
                 Monday - Friday: 9am - 6pm<br />
                 Saturday: 10am - 4pm<br />

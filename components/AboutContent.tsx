@@ -5,11 +5,11 @@ export default function AboutContent() {
     <>
      
       {/* Content Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-200">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 gap-12 items-stretch">
             <div>
-              <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">About Ultimate Kitchen & Bath</h2>
+              <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">About Ultimate Kitchen & Bath</h1>
               <p className="text-lg mb-6 text-gray-700 leading-relaxed">
                 At Ultimate Kitchen and Bath, we are Boca Raton&apos;s premier kitchen and bathroom remodeling specialists. Our expertise spans custom kitchen design, luxury bathroom renovations, and complete home remodeling projects throughout South Florida. Whether you&apos;re looking for modern kitchen remodeling in Boca Raton or contemporary bathroom renovations, our team delivers exceptional results that transform your space.
               </p>
@@ -22,7 +22,7 @@ export default function AboutContent() {
             </div>
             <div className="relative h-full">
               <Image
-                src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/ukb_kitchen.png"
                 alt="Luxury Kitchen Remodeling in Boca Raton"
                 layout="fill"
                 objectFit="cover"

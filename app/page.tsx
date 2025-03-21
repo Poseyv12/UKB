@@ -7,6 +7,13 @@ import ProjectsGallery from '../components/ProjectsGallery'
 import CallToAction from '../components/CallToAction'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Faq from '../components/FAQ'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ultimate Kitchen & Bath',
+  description: 'Ultimate Kitchen & Bath is a leading kitchen and bath remodeling company in Boca Raton, FL. We specialize in luxury kitchen and bathroom renovations, custom cabinetry, and expert craftsmanship.',
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">

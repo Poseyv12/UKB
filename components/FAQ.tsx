@@ -14,46 +14,46 @@ export default function FAQ() {
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1">
               <AccordionTrigger>
-                How long does a kitchen or bathroom remodeling project take in Boca Raton?
+                What is the typical timeline for a kitchen or bathroom remodel?
               </AccordionTrigger>
               <AccordionContent>
-                For Boca Raton home renovations, a custom bathroom remodel typically takes 2-3 weeks, while a luxury kitchen remodel ranges from 4-8 weeks. At Ultimate Kitchen & Bath, our timeline varies based on project scope, from simple cabinet refacing to complete custom kitchen design. We provide detailed schedules during consultation and maintain clear communication throughout your Boca Raton kitchen and bath renovation.
+                Most bathroom renovations take 2-3 weeks to complete, while kitchen remodels typically require 4-8 weeks. The exact timeline depends on your project&apos;s scope - from simple updates to complete renovations. During your initial consultation, we&apos;ll provide a detailed schedule and keep you informed throughout the entire process.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2">
               <AccordionTrigger>
-                What&apos;s the cost of kitchen and bathroom remodeling in Boca Raton?
+                What should I budget for a kitchen or bathroom remodel?
               </AccordionTrigger>
               <AccordionContent>
-                As top-rated kitchen designers in Boca Raton, we offer options for every budget. Bathroom renovations typically range from $10,000 for basic updates to $50,000+ for high-end bathroom remodeling. Modern kitchen remodeling in Boca Raton ranges from $25,000 to $100,000+ for luxury kitchen remodels. Costs vary based on materials, scope, and whether you&apos;re choosing custom cabinetry, countertop installation, or complete plumbing renovation.
+                Bathroom remodeling costs typically range from $10,000 for essential updates to $50,000+ for luxury renovations. Kitchen remodeling projects generally start at $25,000 and can exceed $100,000 for high-end transformations. Your final investment will depend on material choices, project scope, and whether you&apos;re updating specific elements or opting for a complete renovation.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
               <AccordionTrigger>
-                What types of kitchen and bathroom remodeling services do you offer in Boca Raton?
+                What services are included in your remodeling packages?
               </AccordionTrigger>
               <AccordionContent>
-                As Boca Raton kitchen and bath experts, we provide comprehensive services including custom kitchen design, contemporary bathroom renovation, shower and tub upgrades, tile and flooring installation, and energy-efficient kitchen upgrades. Whether you&apos;re interested in an open concept kitchen remodel or a bathroom remodel with walk-in shower, our South Florida kitchen and bath remodeling team handles everything from design to completion.
+                Our comprehensive services include custom design, full-scale renovations, and specialized upgrades. We handle everything from concept to completion - including cabinetry, countertops, flooring, lighting, and plumbing. Whether you&apos;re dreaming of a modern kitchen with an open concept or a spa-like bathroom retreat, our experienced team will guide you through every step of the transformation.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
               <AccordionTrigger>
-                Why choose Ultimate Kitchen & Bath for your Boca Raton remodeling project?
+                What makes Ultimate Kitchen & Bath different from other remodeling companies?
               </AccordionTrigger>
               <AccordionContent>
-                As the best kitchen remodelers in Boca Raton, we combine expertise with personalized service. Our Boca Raton bathroom designers and kitchen experts specialize in both small kitchen renovation ideas and luxury remodels. We&apos;re known for quality craftsmanship, transparent pricing, and exceptional customer service. From custom cabinetry to complete home remodeling in Boca Raton, we&apos;re your trusted local contractor.
+                Our reputation is built on three core principles: exceptional craftsmanship, transparent communication, and dedicated customer service. We bring over two decades of experience to every project, whether it&apos;s a modest update or a complete transformation. Our team of certified designers and skilled craftsmen work together to ensure your vision becomes reality while respecting your budget and timeline.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5">
               <AccordionTrigger>
-                What warranties and guarantees do you offer on Boca Raton kitchen and bath projects?
+                What type of warranty protection do you provide?
               </AccordionTrigger>
               <AccordionContent>
-                Ultimate Kitchen & Bath provides comprehensive warranties on all Boca Raton home renovations. Our workmanship comes with a 2-year warranty, plus manufacturer warranties on products and materials. As your dedicated kitchen and bath contractor in Boca Raton, we offer ongoing support and maintenance services. Contact Ultimate Kitchen & Bath for kitchen upgrades in Boca Raton and experience our commitment to excellence.
+                We stand behind our work with a comprehensive 2-year warranty on craftsmanship, complemented by manufacturer warranties on all installed products and materials. Our commitment doesn&apos;t end at project completion - we provide ongoing support and maintenance services to ensure your continued satisfaction. Contact us to learn more about our warranty coverage and dedication to quality.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

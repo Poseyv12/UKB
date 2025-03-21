@@ -5,16 +5,16 @@ import Image from 'next/image'
 
 const images = [
   {
-    src: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    alt: 'Luxury Kitchen Remodeling in Boca Raton - Modern Design',
+    src: '/ukb_kitchen.png',
+    alt: 'Modern luxury kitchen with white cabinets and marble countertops',
   },
   {
-    src: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    alt: 'Custom Bathroom Renovation Boca Raton - Spa-Like Retreat',
+    src: '/images/ukb_kitchen2.jpeg',
+    alt: 'Contemporary bathroom featuring walk-in shower and double vanity',
   },
   {
-    src: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80',
-    alt: 'High-End Kitchen and Bath Remodeling Boca Raton',
+    src: '/images/ukb_kitchen3.jpeg',
+    alt: 'Designer kitchen with custom cabinetry and island',
   }
 ]
 
@@ -37,6 +37,8 @@ export default function HeroSlider() {
           src={image.src}
           alt={image.alt}
           fill
+          sizes="100vw"
+          quality={90}
           style={{
             objectFit: 'cover',
             opacity: index === currentImage ? 1 : 0,
@@ -54,10 +56,9 @@ export default function HeroSlider() {
             Transform Your Home with South Florida&apos;s Most Trusted Kitchen and Bathroom Renovation Specialists
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-700 transition duration-300">
-              Complimetery Design Consultation
+            <button className="bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition duration-300">
+              Complimentary Design Consultation
             </button>
-         
           </div>
         </div>
       </div>

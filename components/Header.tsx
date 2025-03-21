@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Menu } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -26,33 +26,29 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li className="flex items-center">
-              <Link href="/" className="text-gray-600 hover:text-gray-800 flex items-center">
-                
+              <Link href="/" className="text-gray-600 hover:text-orange-500 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">
                 Home
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href="/about" className="text-gray-600 hover:text-gray-800">
+              <Link href="/about" className="text-gray-600 hover:text-orange-600 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-orange-600 after:transition-all after:duration-300 hover:after:w-full">
                 About
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href="/gallery" className="text-gray-600 hover:text-gray-800">
+              <Link href="/gallery" className="text-gray-600 hover:text-orange-600 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-orange-600 after:transition-all after:duration-300 hover:after:w-full">
                 Gallery
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href="/blog" className="text-gray-600 hover:text-gray-800">
+              <Link href="/blog" className="text-gray-600 hover:text-orange-500 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">
                 Blog
               </Link>
             </li>
             <li className="flex items-center">
-              <Button asChild variant="default" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                <Link href="/contact" className="flex items-center">
-                  <Phone className="w-4 h-4 mr-1" />
-                  Contact
-                </Link>
-              </Button>
+              <Link href="/contact" className="text-gray-600 hover:text-orange-500 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>
@@ -68,20 +64,19 @@ export default function Header() {
               <SheetTitle>Menu</SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col space-y-4 mt-6">
-              <Link href="/" className="text-gray-600 hover:text-gray-800 flex items-center">
+              <Link href="/" className="text-gray-600 hover:text-gray-800 relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full">
                 Home
               </Link>
-              <Link href="/about" className="text-gray-600 hover:text-gray-800">
+              <Link href="/about" className="text-gray-600 hover:text-gray-800 relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full">
                 About
               </Link>
-              <Link href="/gallery" className="text-gray-600 hover:text-gray-800">
+              <Link href="/gallery" className="text-gray-600 hover:text-gray-800 relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full">
                 Gallery
               </Link>
-              <Link href="/blog" className="text-gray-600 hover:text-gray-800">
+              <Link href="/blog" className="text-gray-600 hover:text-gray-800 relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full">
                 Blog
               </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-gray-800 flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
+              <Link href="/contact" className="text-gray-600 hover:text-gray-800 relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full">
                 Contact
               </Link>
             </nav>

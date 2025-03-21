@@ -5,6 +5,12 @@ import Faq from '../../components/FAQ'
 import CallToAction from '../../components/CallToAction'
 import ProjectsGallery from '../../components/ProjectsGallery'
 import UserFlow from '@/components/UserFlow'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us - Ultimate Kitchen & Bath',
+  description: 'Learn more about Ultimate Kitchen & Bath, your trusted partner for kitchen and bath remodeling in Boca Raton, FL.',
+}
 
 export default function AboutPage() {
   return (
@@ -14,9 +20,9 @@ export default function AboutPage() {
         <AboutContent />
         <UserFlow />
         <ProjectsGallery />
+        <CallToAction />
+        <Faq />
       </main>
-      <CallToAction />
-      <Faq />
       <Footer />
     </div>
   )

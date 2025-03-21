@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { supabase } from '../lib/supabaseClient';
 
 export default async function BlogContent() {
@@ -6,7 +7,7 @@ export default async function BlogContent() {
     .from('posts')
     .select('id, title, excerpt, post_image, created_at')
     .order('created_at', { ascending: false })
-    .limit(6);
+    .limit(4);
 
   if (error) {
     return (
@@ -29,9 +30,11 @@ export default async function BlogContent() {
             <article className="bg-white rounded-lg overflow-hidden border border-gray-200">
               {post.post_image && (
                 <div className="aspect-video overflow-hidden">
-                  <img
+                  <Image
                     src={post.post_image}
                     alt={post.title}
+                    width={600}
+                    height={338}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                   />
                 </div>
