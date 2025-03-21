@@ -46,34 +46,34 @@ export default function GalleryContent({ galleryData }: GalleryContentProps) {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="kitchen" className="w-full">
-            <TabsList className="flex justify-center gap-4 mb-12">
+            <TabsList className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
               <TabsTrigger 
                 value="kitchen"
-                className="px-8 py-3 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                className="px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Kitchen
               </TabsTrigger>
               <TabsTrigger 
                 value="bath"
-                className="px-8 py-3 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                className="px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Bathroom 
               </TabsTrigger>
               <TabsTrigger 
                 value="other"
-                className="px-8 py-3 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                className="px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Bar Spaces
               </TabsTrigger>
               <TabsTrigger 
                 value="master-bath"
-                className="px-8 py-3 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                className="px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
-                Master Bathrooms
+                Master Bath
               </TabsTrigger>  
             </TabsList>
 
