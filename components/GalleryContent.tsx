@@ -52,22 +52,29 @@ export default function GalleryContent({ galleryData }: GalleryContentProps) {
                 className="px-8 py-3 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
-                Kitchen Projects
+                Kitchen
               </TabsTrigger>
               <TabsTrigger 
                 value="bath"
                 className="px-8 py-3 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
-                Bathroom Projects
+                Bathroom 
               </TabsTrigger>
               <TabsTrigger 
                 value="other"
                 className="px-8 py-3 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
-                Other Spaces
+                Bar Spaces
               </TabsTrigger>
+              <TabsTrigger 
+                value="master-bath"
+                className="px-8 py-3 rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
+              >
+                Master Bathrooms
+              </TabsTrigger>  
             </TabsList>
 
             <div className="relative">
