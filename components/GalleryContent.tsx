@@ -46,38 +46,38 @@ export default function GalleryContent({ galleryData }: GalleryContentProps) {
       <section className="py-12 sm:py-20">
         <div className="container mx-auto px-2 sm:px-4">
           <Tabs defaultValue="kitchen" className="w-full">
-            <TabsList className="flex flex-wrap justify-center gap-x-2 gap-y-3 mb-10 sm:mb-12 mx-auto max-w-[95vw] sm:max-w-none">
+            <TabsList className="grid grid-cols-2 sm:flex sm:flex-row justify-center gap-x-2 gap-y-4 mb-20 sm:mb-12 mx-auto max-w-[95vw] sm:max-w-none">
               <TabsTrigger 
                 value="kitchen"
-                className="flex-1 sm:flex-none min-w-[70px] max-w-[120px] px-2 sm:px-8 py-2 sm:py-3 text-xs sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                className="w-full sm:w-auto sm:flex-none px-2 sm:px-8 py-2 sm:py-3 text-xs sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Kitchen
               </TabsTrigger>
               <TabsTrigger 
                 value="bath"
-                className="flex-1 sm:flex-none min-w-[70px] max-w-[120px] px-2 sm:px-8 py-2 sm:py-3 text-xs sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                className="w-full sm:w-auto sm:flex-none px-2 sm:px-8 py-2 sm:py-3 text-xs sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Bath
               </TabsTrigger>
               <TabsTrigger 
                 value="other"
-                className="flex-1 sm:flex-none min-w-[70px] max-w-[120px] px-2 sm:px-8 py-2 sm:py-3 text-xs sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                className="w-full sm:w-auto sm:flex-none px-2 sm:px-8 py-2 sm:py-3 text-xs sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Bar
               </TabsTrigger>
               <TabsTrigger 
                 value="master-bath"
-                className="flex-1 sm:flex-none min-w-[70px] max-w-[120px] px-2 sm:px-8 py-2 sm:py-3 text-xs sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
+                className="w-full sm:w-auto sm:flex-none px-2 sm:px-8 py-2 sm:py-3 text-xs sm:text-base rounded-lg text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors
                 data-[state=active]:bg-orange-500 data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Master
               </TabsTrigger>  
             </TabsList>
 
-            <div className="relative mt-4 sm:mt-0">
+            <div className="relative mt-8 sm:mt-0">
               {Object.entries(galleryItems).map(([category, items]) => (
                 <TabsContent 
                   key={category} 
