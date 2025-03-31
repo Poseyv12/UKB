@@ -33,7 +33,7 @@ export default function GalleryContent({ galleryData, showTabs = true }: Gallery
         return (
           <div
             key={index}
-            className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-xl shadow-lg group cursor-pointer"
+            className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden shadow-lg group cursor-pointer"
             onClick={() => setSelectedImage({ src: imageUrl, alt: item.alt })}
           >
             <Image

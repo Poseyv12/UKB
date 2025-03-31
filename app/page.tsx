@@ -1,13 +1,13 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HeroSlider from '../components/HeroSlider'
-import ServicesSection from '../components/ServicesSection'
 import TestimonialsSection from '../components/TestimonialsSection'
 import ProjectsGallery from '../components/ProjectsGallery'
 import CallToAction from '../components/CallToAction'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Faq from '../components/FAQ'
 import { Metadata } from 'next'
+import ServicesContent from '@/components/ServicesContent'
 
 export const metadata: Metadata = {
   title: 'Ultimate Kitchen & Bath',
@@ -20,9 +20,9 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <HeroSlider /> {/* Showcases luxury kitchen and bathroom remodeling in Boca Raton */}
-        <ProjectsGallery /> {/* Displays our best kitchen and bathroom remodels in Boca Raton */}
+        <ServicesContent /> {/* Features our custom kitchen design and bathroom renovation services */}
         <WhyChooseUs /> {/* Highlights why we're the top-rated kitchen and bath experts in Boca Raton */}
-        <ServicesSection /> {/* Features our custom kitchen design and bathroom renovation services */}
+        <ProjectsGallery /> {/* Displays our best kitchen and bathroom remodels in Boca Raton */}
         <TestimonialsSection /> {/* Reviews from satisfied Boca Raton homeowners */}
         <CallToAction /> {/* Connect with Boca Raton's premier kitchen and bath contractor */}
         <Faq /> {/* Frequently asked questions about our services */}

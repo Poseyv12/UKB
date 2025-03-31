@@ -17,9 +17,10 @@ export default function CallToAction() {
         <h2 className="text-3xl font-bold text-white mb-4">
           Ready to Transform Your Space?
         </h2>
-        <p className="text-xl text-white mb-8">
+        {/* <p className="text-xl text-white mb-8">
           Let&apos;s bring your dream kitchen or bathroom to life!
-        </p>
+        </p> */}
+        <p className="text-xl text-white mb-8">Schedual a time to come into our showroom to see our products and get a free consultation</p>
         <Button 
           asChild 
           size="lg" 

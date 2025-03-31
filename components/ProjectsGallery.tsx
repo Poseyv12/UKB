@@ -4,28 +4,28 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: 'Modern Kitchen Renovation',
-    description: 'Contemporary design with custom cabinetry',
+    title: 'Modern Kitchens',
+    description: 'Contemporary design',
     image: '/ukb_kitchen.png',
     category: 'Kitchen',
   },
   {
-    title: 'Luxurious Kitchen Makeover',
+    title: 'Luxurious Primary Bathrooms',
     description: 'High-end finishes with marble countertops',
     image: '/images/ukb_kitchen2.jpeg',
+    category: 'Bathroom',
+  },
+  {
+    title: 'Trasitional Kitchens',
+    description: 'Elegant blend of modern classic',
+    image: 'https://www.thespruce.com/thmb/Grr2Hh5S2_NMqJErTtlm2vYWVSI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Brooklinteriors-12_edit-ae379112859941569297b68f5b798b22.jpg',
     category: 'Kitchen',
   },
   {
-    title: 'Sleek Kitchen Design',
-    description: 'Open concept with island seating',
-    image: '/images/ukb_kitchen3.jpeg',
-    category: 'Kitchen',
-  },
-  {
-    title: 'Luxurious Kitchen Makeover',
-    description: 'Modern appliances with custom storage',
+    title: 'Secondary Bathrooms',
+    description: 'Timeless elegance with modern fixtures',
     image: '/images/ukb_kitchen4.jpeg',
-    category: 'Kitchen',
+    category: 'Bathroom',
   },
 ]
 
@@ -39,7 +39,7 @@ export default function ProjectsGallery() {
           </h2>
           <div className="w-20 h-1 bg-orange-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600">
-            Browse through our latest transformations and get inspired for your own renovation.
+            Browse through our latest renovations!
           </p>
         </div>
         

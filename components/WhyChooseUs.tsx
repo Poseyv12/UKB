@@ -2,12 +2,12 @@ import { Check } from 'lucide-react'
 import Image from 'next/image';
 
 const reasons = [
-  "20+ Years of Experience in Kitchen & Bath Remodeling",
-  "Fully Licensed and Insured Professional Team",
-  "Custom Designs Tailored to Your Unique Style and Needs",
-  "High-Quality Materials and Craftsmanship",
-  "Transparent Pricing and No Hidden Fees",
-  "Timely Project Completion and Clean Job Sites",
+  "35+ Years Of Experience In Kitchen & Bath Remodeling",
+  "Fully Licensed Residential Contractor With 25+ Years Of Experience", 
+  "In Depth Drawing And Design Services Catered To Your Project",
+  "Different Cabinetry And Countertop Lines To Fit Your Style And Budget",
+  "Transparent, All Inclusive Pricing And No Hidden Fees",
+  "Family Owned And Operated Business With An Unmatched Reputation For Quality And Customer Service",
 ]
 
 const awards = [

@@ -15,7 +15,7 @@ async function getGalleryData() {
       _type,
       asset,
       alt,
-      caption
+      caption,
     }
   }`
   
@@ -38,6 +38,12 @@ export default async function GalleryPage() {
     return acc
   }, {} as Record<string, GalleryItem>)
 
+  // Reverse the gallery items
+  const reversedCategories = Object.entries(categories).reverse().reduce((acc, [category, firstImage]) => {
+    acc[category] = firstImage
+    return acc
+  }, {} as Record<string, GalleryItem>)
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -52,7 +58,7 @@ export default async function GalleryPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white text-center">
               Our Project Gallery
             </h1>
@@ -65,13 +71,13 @@ export default async function GalleryPage() {
         <section className="py-12 sm:py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-              {Object.entries(categories).map(([category, firstImage]) => {
+              {Object.entries(reversedCategories).map(([category, firstImage]) => {
                 const imageUrl = urlForImage(firstImage.asset)
                 return (
                   <Link
                     key={category}
                     href={`/gallery/${category}`}
-                    className="group relative h-[400px] overflow-hidden rounded-xl shadow-lg transition-transform hover:scale-[1.02] duration-300"
+                    className="group relative h-[400px] overflow-hidden shadow-lg transition-transform hover:scale-[1.02] duration-300"
                   >
                     <Image
                       src={imageUrl || '/ukb_kitchen.png'}
@@ -80,9 +86,9 @@ export default async function GalleryPage() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70" />
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h2 className="text-2xl sm:text-3xl font-bold capitalize mb-2">
+                      <h2 className="text-2xl sm:text-3xl font-bold capitalize mb-2 text-orange-500">
                         {category.replace('-', ' ')}
                       </h2>
                       <p className="text-gray-200">

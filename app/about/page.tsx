@@ -4,8 +4,9 @@ import AboutContent from '../../components/AboutContent'
 import Faq from '../../components/FAQ'
 import CallToAction from '../../components/CallToAction'
 import ProjectsGallery from '../../components/ProjectsGallery'
-import UserFlow from '@/components/UserFlow'
+
 import { Metadata } from 'next'
+import MeetTheTeam from '../components/MeetTheTeam'
 
 export const metadata: Metadata = {
   title: 'About Us - Ultimate Kitchen & Bath',
@@ -18,7 +19,7 @@ export default function AboutPage() {
       <Header />
       <main className="flex-grow">
         <AboutContent />
-        <UserFlow />
+        <MeetTheTeam />
         <ProjectsGallery />
         <CallToAction />
         <Faq />

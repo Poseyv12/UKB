@@ -28,7 +28,7 @@ export default function CategoryGallery({ galleryData }: CategoryGalleryProps) {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white text-center">
             {category.replace('-', ' ')} Gallery
           </h1>
@@ -48,7 +48,7 @@ export default function CategoryGallery({ galleryData }: CategoryGalleryProps) {
               return (
                 <div
                   key={index}
-                  className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-xl shadow-lg group cursor-pointer"
+                  className="relative h-[300px] sm:h-[300px] lg:h-[400px] overflow-hidden shadow-lg group cursor-pointer"
                   onClick={() => setSelectedImage({ src: imageUrl, alt: item.alt })}
                 >
                   <Image

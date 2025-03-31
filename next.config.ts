@@ -12,7 +12,9 @@ const nextConfig: NextConfig = {
       'ultimate-kitchen-bath.vercel.app',
       'encrypted-tbn0.gstatic.com',
       'www.grsmgt.com',
-      'syzygyglobal.com'
+      'syzygyglobal.com',
+      'www.thespruce.com',
+      'www.harperfloors.com'
     ],
     remotePatterns: [
       {
@@ -53,6 +55,18 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'syzygyglobal.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.thespruce.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.harperfloors.com',
         port: '',
         pathname: '/**',
       },

@@ -25,8 +25,8 @@ const services = [
   },
   {
     icon: <RulerIcon className="w-12 h-12 text-red-500" />,
-    title: 'Space Planning',
-    description: 'Optimize your layout for better functionality and flow, making the most of every square inch in your home.'
+    title: 'Flooring and Tile',
+    description: 'Choose from a wide range of flooring options and tiles for your kitchen and bathroom to create a beautiful and functional space in your home.'
   },
   {
     icon: <HammerIcon className="w-12 h-12 text-purple-500" />,
