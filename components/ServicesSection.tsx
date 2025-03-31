@@ -96,7 +96,7 @@ export default function ServicesSection() {
                 
                 {service.features && service.features.length > 0 && (
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {service.features.map((feature, featureIndex) => (
+                    {/* {service.features.map((feature, featureIndex) => (
                       <li 
                         key={featureIndex} 
                         className="flex items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
@@ -104,7 +104,7 @@ export default function ServicesSection() {
                         <ArrowRight className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
-                    ))}
+                    ))} */}
                   </ul>
                 )}
 
