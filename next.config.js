@@ -8,7 +8,9 @@ const nextConfig = {
       'encrypted-tbn0.gstatic.com',
       'www.grsmgt.com',
       'syzygyglobal.com',
-      'www.thespruce.com'
+      'www.thespruce.com',
+      'cdn.sanity.io',
+      'photos.fife.usercontent.google.com'
     ],
   },
 }

@@ -6,25 +6,25 @@ const projects = [
   {
     title: 'Modern Kitchens',
     description: 'Contemporary design',
-    image: '/ukb_kitchen.png',
+    image: 'https://lh3.googleusercontent.com/pw/AP1GczONfUOoAPgxwordszf6l6QH_wJnmKHb3whmO96Bdmft60H0SYIWEtdY54kP4xIK5jpL-O0zhM5huRaxNd-Rqj0YZsRsLBDBxLKNblD4JHWoTFCYNJbM-WUyK5V8AS20lPO8DCNxTxcH5KYarS3SOvot=w2014-h1510-s-no-gm?authuser=0',
     category: 'Kitchen',
   },
   {
     title: 'Luxurious Primary Bathrooms',
     description: 'High-end finishes with marble countertops',
-    image: '/images/ukb_kitchen2.jpeg',
+    image: '/images/bath-1.jpg',
     category: 'Bathroom',
   },
   {
     title: 'Trasitional Kitchens',
     description: 'Elegant blend of modern classic',
-    image: 'https://www.thespruce.com/thmb/Grr2Hh5S2_NMqJErTtlm2vYWVSI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Brooklinteriors-12_edit-ae379112859941569297b68f5b798b22.jpg',
+    image: '/images/trans-kitchen.png',
     category: 'Kitchen',
   },
   {
     title: 'Secondary Bathrooms',
     description: 'Timeless elegance with modern fixtures',
-    image: '/images/ukb_kitchen4.jpeg',
+    image: '/images/sec-bath.jpeg',
     category: 'Bathroom',
   },
 ]
