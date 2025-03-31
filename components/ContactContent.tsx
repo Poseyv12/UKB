@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormItem, FormLabel, FormMessage, FormField } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Checkbox } from "@/components/ui/checkbox"
 import Image from 'next/image'
 
 const formSchema = z.object({
@@ -20,7 +21,21 @@ const formSchema = z.object({
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
+  services: z.array(z.string()).min(1, {
+    message: "Please select at least one service.",
+  }),
 })
+
+const services = [
+  { id: "kitchen_remodel", label: "Kitchen Remodeling" },
+  { id: "bathroom_remodel", label: "Bathroom Remodeling" },
+  { id: "custom_cabinets", label: "Custom Cabinets" },
+  { id: "countertops", label: "Countertops" },
+  { id: "flooring", label: "Flooring" },
+  { id: "lighting", label: "Lighting Design" },
+  { id: "plumbing", label: "Plumbing" },
+  { id: "other", label: "Other" },
+]
 
 export default function ContactContent() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -32,6 +47,7 @@ export default function ContactContent() {
       name: "",
       email: "",
       message: "",
+      services: [],
     },
   })
 
@@ -132,6 +148,49 @@ export default function ContactContent() {
                         </FormItem>
                       )}
                     />
+                    <FormField
+                      control={form.control}
+                      name="services"
+                      render={() => (
+                        <FormItem>
+                          <FormLabel className="text-gray-700">Services of Interest</FormLabel>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {services.map((service) => (
+                              <FormField
+                                key={service.id}
+                                control={form.control}
+                                name="services"
+                                render={({ field }) => {
+                                  return (
+                                    <FormItem
+                                      key={service.id}
+                                      className="flex flex-row items-start space-x-3 space-y-0"
+                                    >
+                                      <FormControl>
+                                        <Checkbox
+                                          checked={field.value?.includes(service.id)}
+                                          onCheckedChange={(checked: boolean) => {
+                                            return checked
+                                              ? field.onChange([...field.value, service.id])
+                                              : field.onChange(
+                                                  field.value?.filter((value) => value !== service.id)
+                                                )
+                                          }}
+                                        />
+                                      </FormControl>
+                                      <FormLabel className="font-normal">
+                                        {service.label}
+                                      </FormLabel>
+                                    </FormItem>
+                                  )
+                                }}
+                              />
+                            ))}
+                          </div>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
@@ -153,15 +212,14 @@ export default function ContactContent() {
               <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-10">
                 <h2 className="text-3xl font-bold mb-8">Visit Our Showroom</h2>
                 
-                <div className="relative h-[300px] rounded-xl overflow-hidden mb-10 group">
+                <div className="relative h-[300px] rounded-xl overflow-hidden mb-10">
                   <Image
                     src="https://images.unsplash.com/photo-1643903032976-8c0d0556a8ea?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Ultimate Kitchen &amp; Bath Showroom"
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 
                 <div className="space-y-8">

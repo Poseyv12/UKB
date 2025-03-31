@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-
+import Link from 'next/link';
 interface Service {
   image: string;
   title: string;
@@ -72,15 +72,16 @@ export default function ServicesSection() {
                 index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
               } gap-16 items-center`}
             >
+              
               <div className="w-full lg:w-1/2">
-                <div className="relative h-[500px] rounded-3xl overflow-hidden group">
+                <div className="relative h-[400px] overflow-hidden group">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover transition-all duration-700 group-hover:scale-110"
+                    className="object-cover transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 duration-300" />
                 </div>
               </div>
               
@@ -108,11 +109,11 @@ export default function ServicesSection() {
                   </ul>
                 )}
 
-                <button className="group relative inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-orange-600">
+                <Link href="/contact" className="group relative inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-orange-600">
                   <span className="relative z-10">Learn More</span>
                   <ArrowRight className="ml-2 w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                </button>
+                </Link>
               </div>
             </div>
           ))}
