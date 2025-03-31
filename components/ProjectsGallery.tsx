@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Trasitional Kitchens',
     description: 'Elegant blend of modern classic',
-    image: '/images/trans-kitchen.png',
+    image: '/images/trans-kitchen.PNG',
     category: 'Kitchen',
   },
   {

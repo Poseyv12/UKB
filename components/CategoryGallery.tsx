@@ -30,7 +30,7 @@ export default function CategoryGallery({ galleryData }: CategoryGalleryProps) {
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white text-center">
-            {category.replace('-', ' ')} Gallery
+            {category.replace('-', ' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')} Gallery
           </h1>
         </div>
       </section>
@@ -61,7 +61,6 @@ export default function CategoryGallery({ galleryData }: CategoryGalleryProps) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    {item.caption && <p className="text-sm sm:text-base text-gray-200">{item.caption}</p>}
                     <p className="text-sm sm:text-base text-gray-200">Click to view details</p>
                   </div>
                 </div>
