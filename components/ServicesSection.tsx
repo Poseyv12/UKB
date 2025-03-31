@@ -10,41 +10,41 @@ interface Service {
 
 const services: Service[] = [
   {
-    image: 'https://plus.unsplash.com/premium_photo-1671269942050-df7e96b3e4ac?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2l0Y2hlbiUyMG1vZGVybnxlbnwwfHwwfHx8MA%3D%3D',
+    image: 'https://lh3.googleusercontent.com/pw/AP1GczPfMijE0zggGn7wGvMgNOpOuudT_e6M-sn7WZqjpn8LlkymZaKSCgQlOEk73x0JKHmjadYrVupXJZ5ly3ImYl0l_bBqk1yCXOD86KbqZFbmVgUzzFcIemiOwdNeCh_ItBuLhr76NGBDhWPDEF3xLyLu=w2014-h1510-s-no-gm?authuser=0',
     title: 'Kitchen Remodeling',
     description: 'Transform your kitchen into a modern, functional space with custom cabinetry, premium countertops, and state-of-the-art appliances.',
     features: ['Custom Cabinet Design', 'Premium Countertops', 'Modern Appliance Integration', 'Expert Installation']
   },
   {
-    image: 'https://images.unsplash.com/photo-1576698483491-8c43f0862543?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmF0aCUyMG1vZGVybnxlbnwwfHwwfHx8MA%3D%3D',
+    image: 'https://lh3.googleusercontent.com/pw/AP1GczMCD_yekUO1Fj7dzM7kxH8ENdLpPGJZm8YWKDsp9KgeLrCFJkbrarR8qJDTP1rib24LWvtxeUCP8xEpDYj1NzK5ZvWT6_B86282tqEQlu0ZnRMIvZRQUKyklNBmWNBuFokf9dllb5bL5fWl6JLjg3Fq=w2014-h1510-s-no-gm?authuser=0',
     title: 'Bathroom Renovation',
     description: 'Create a luxurious and relaxing bathroom oasis with premium fixtures, custom tilework, and elegant design elements.',
     features: ['Luxury Fixtures', 'Custom Tile Design', 'Modern Vanities', 'Spa-like Amenities']
   },
   {
-    image: 'https://images.unsplash.com/photo-1628745277866-0c4468030a81?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: 'https://lh3.googleusercontent.com/pw/AP1GczO_5Ai5FbytfFKmfc72toLG4U70Rhnv1RUunnoUKHO18a5Ar0GyLDBSsyW-q583Qg8NjQqOPfSXEpIVdp3fA-7-Y9GGMOnBhuMjje3WvzBAozV8PBAr0fMkFm_5f01ORqF95TwJPzbODllLowz2JKif=w1510-h1510-s-no-gm?authuser=0',
     title: 'Custom Cabinetry',
     description: 'Tailor-made cabinets crafted with precision to maximize your storage and enhance your space\'s aesthetic appeal.',
     features: ['Premium Materials', 'Custom Finishes', 'Innovative Storage', 'Expert Craftsmanship']
   },
   {
-    image: 'https://www.harperfloors.com/cdn/shop/articles/Luxury_Vinyl_Plank_Flooring_3000x.jpg?v=1673601438',
+    image: 'https://lh3.googleusercontent.com/pw/AP1GczOuElnpkFSfeIAWzE5wxc5VlI_nrOCqOk7jouYtyN3fg-B_MNtdIHFSfxbvA2wsg-uoApjL4UfRIpAtZrLRxFUvGFKtzEq1FerBDY_zQ1A42ticwky6rDMl0IlVdn31iHKmhfgPC_fvpb1ewVyEgSac=w1320-h849-s-no-gm?authuser=0',
     title: 'Flooring and Tile',
     description: 'Choose from a wide range of flooring options and tiles for your kitchen and bathroom.',
     features: ['Luxury Vinyl Plank', 'Ceramic & Porcelain Tile', 'Natural Stone', 'Professional Installation']
   },
   {
-    image: 'https://images.unsplash.com/photo-1542621334-a254cf47733d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFyY2hpdGVjdHVyZSUyMHBsYW5zfGVufDB8fDB8fHww',
+    image: 'https://lh3.googleusercontent.com/pw/AP1GczM1n_yyeN9R02JPlwjtYBHddPHv6URYPFxSepJu95lMFMxY7b_AT0i8NGL26ZQ2c_mSlJGaKfQwNyIFfnA2KaM8QWYOHh5IYyT2BCCJKNl-xrTqSJLLGhe4-pR9yRCLxnhP_rq3obF5S5yl9tR5QEy9=w960-h672-s-no-gm?authuser=0',
     title: 'Space Planning',
     description: 'Optimize your layout for better functionality and flow.',
     features: ['3D Design Visualization', 'Traffic Flow Analysis', 'Storage Solutions', 'Ergonomic Planning']
   },
-  {
-    image: 'https://images.unsplash.com/photo-1581876424484-0d87430585e0?w=800&auto=format&fit=crop',
-    title: 'Lighting Design',
-    description: 'Enhance your space with modern lighting solutions.',
-    features: ['LED Integration', 'Ambient Lighting', 'Task Lighting', 'Energy Efficiency']
-  }
+  // {
+  //   image: 'https://images.unsplash.com/photo-1581876424484-0d87430585e0?w=800&auto=format&fit=crop',
+  //   title: 'Lighting Design',
+  //   description: 'Enhance your space with modern lighting solutions.',
+  //   features: ['LED Integration', 'Ambient Lighting', 'Task Lighting', 'Energy Efficiency']
+  // }
 ];
 
 export default function ServicesSection() {
