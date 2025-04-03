@@ -14,8 +14,11 @@ export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   apiVersion: '2024-01-01',
-  useCdn: process.env.NODE_ENV === 'production',
+  useCdn: true, // Always use CDN in production
   perspective: 'published',
+  // Add these options to ensure proper CORS handling
+  withCredentials: false,
+  token: undefined, // Explicitly set to undefined since we don't need it
 });
 
 // Test function to verify Sanity connection

@@ -8,24 +8,28 @@ const projects = [
     description: 'Contemporary design',
     image: 'https://lh3.googleusercontent.com/pw/AP1GczONfUOoAPgxwordszf6l6QH_wJnmKHb3whmO96Bdmft60H0SYIWEtdY54kP4xIK5jpL-O0zhM5huRaxNd-Rqj0YZsRsLBDBxLKNblD4JHWoTFCYNJbM-WUyK5V8AS20lPO8DCNxTxcH5KYarS3SOvot=w2014-h1510-s-no-gm?authuser=0',
     category: 'Kitchen',
+    link: '/gallery/Kitchen',
   },
   {
     title: 'Luxurious Primary Bathrooms',
     description: 'High-end finishes with marble countertops',
     image: '/images/bath-1.jpg',
     category: 'Bathroom',
+    link: '/gallery/Master-Bath',
   },
   {
     title: 'Trasitional Kitchens',
     description: 'Elegant blend of modern classic',
     image: '/images/trans-kitchen.PNG',
     category: 'Kitchen',
+    link: '/gallery/Kitchen',
   },
   {
     title: 'Secondary Bathrooms',
     description: 'Timeless elegance with modern fixtures',
     image: '/images/sec-bath.jpeg',
-    category: 'Bathroom',
+    category: 'Bathroom', 
+    link: '/gallery/Bath',
   },
 ]
 
@@ -45,8 +49,9 @@ export default function ProjectsGallery() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
-            <div
+            <Link
               key={index}
+              href={project.link}
               className="group relative bg-white overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl"
             >
               <div className="relative h-[300px] sm:h-[400px] w-full overflow-hidden">
@@ -67,7 +72,7 @@ export default function ProjectsGallery() {
                 <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
                 <p className="text-base text-gray-200">{project.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

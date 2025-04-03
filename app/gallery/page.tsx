@@ -11,6 +11,7 @@ import BackButton from '../../components/BackButton'
 async function getGalleryData() {
   const query = `*[_type == "gallery"] {
     category,
+    order,
     images[] {
       _type,
       asset,
@@ -30,19 +31,24 @@ export const metadata: Metadata = {
 export default async function GalleryPage() {
   const galleryData = await getGalleryData()
   
-  // Get unique categories and their first image
+  // Get unique categories and their first image, preserving order
   const categories = galleryData.reduce((acc, item) => {
     if (!acc[item.category] && item.images.length > 0) {
-      acc[item.category] = item.images[0]
+      acc[item.category] = {
+        image: item.images[0],
+        order: item.order || 999 // Default to high number if no order specified
+      }
     }
     return acc
-  }, {} as Record<string, GalleryItem>)
+  }, {} as Record<string, { image: GalleryItem; order: number }>)
 
-  // Reverse the gallery items
-  const reversedCategories = Object.entries(categories).reverse().reduce((acc, [category, firstImage]) => {
-    acc[category] = firstImage
-    return acc
-  }, {} as Record<string, GalleryItem>)
+  // Sort categories by order
+  const sortedCategories = Object.entries(categories)
+    .sort(([, a], [, b]) => a.order - b.order)
+    .reduce((acc, [category, { image }]) => {
+      acc[category] = image
+      return acc
+    }, {} as Record<string, GalleryItem>)
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -71,7 +77,7 @@ export default async function GalleryPage() {
         <section className="py-12 sm:py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-              {Object.entries(reversedCategories).map(([category, firstImage]) => {
+              {Object.entries(sortedCategories).map(([category, firstImage]) => {
                 const imageUrl = urlForImage(firstImage.asset)
                 return (
                   <Link
