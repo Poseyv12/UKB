@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import Image from 'next/image'
+import { sendContactEmail, type ContactFormData } from '@/app/actions/contact'
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -51,14 +52,23 @@ export default function ContactContent() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: ContactFormData) {
     setIsSubmitting(true)
-    setTimeout(() => {
-      console.log(values)
-      setSubmitMessage('Thank you for your message. We will get back to you soon!')
+    try {
+      const result = await sendContactEmail(values)
+      
+      if (result.success) {
+        setSubmitMessage('Thank you for your message. We will get back to you soon!')
+        form.reset()
+      } else {
+        setSubmitMessage(result.error || 'There was an error sending your message. Please try again later.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      setSubmitMessage('There was an error sending your message. Please try again later.')
+    } finally {
       setIsSubmitting(false)
-      form.reset()
-    }, 2000)
+    }
   }
 
   return (

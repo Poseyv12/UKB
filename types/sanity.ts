@@ -9,6 +9,7 @@ export interface GalleryItem {
 
 export interface Gallery {
   _type: 'gallery'
-  category: 'kitchen' | 'bath' | 'other' | 'master-bath'
+  category: 'kitchen' | 'bath' | 'other' | 'master-bath' 
   images: GalleryItem[]
+  order: number
 } 

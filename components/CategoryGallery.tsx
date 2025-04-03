@@ -14,7 +14,9 @@ interface CategoryGalleryProps {
 export default function CategoryGallery({ galleryData }: CategoryGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
   const category = galleryData[0]?.category || ''
-  const images = galleryData[0]?.images || []
+  // Sort galleries by order and get the first one's images
+  const sortedGalleries = [...galleryData].sort((a, b) => a.order - b.order)
+  const images = sortedGalleries[0]?.images || []
 
   return (
     <>

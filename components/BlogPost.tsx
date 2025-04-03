@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Post } from '../types/post';
 
 interface BlogPostProps {
@@ -17,11 +18,14 @@ export default function BlogPost({ post }: BlogPostProps) {
       </header>
       
       {post.post_image && (
-        <figure className="mb-8">
-          <img 
+        <figure className="mb-8 relative aspect-video">
+          <Image 
             src={post.post_image} 
             alt={post.title} 
-            className="w-full h-auto rounded-lg shadow-lg"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+            className="rounded-lg shadow-lg object-cover"
+            priority={true}
           />
         </figure>
       )}

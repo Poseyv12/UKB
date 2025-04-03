@@ -1,83 +1,30 @@
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
-import BlogPost from '../../../components/BlogPost';
-import { supabase } from '../../../lib/supabaseClient';
-import { Metadata } from 'next'
+import { Metadata } from 'next';
+import BlogPostContent from '@/components/BlogPostContent';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import RecentBlogPosts from '@/components/RecentBlogPosts';
 
 export const metadata: Metadata = {
   title: 'Blog - Ultimate Kitchen & Bath',
   description: 'Read our blog for tips, tricks, and insights on kitchen and bath remodeling in Boca Raton, FL.',
-}
+};
 
-interface BlogPostPageProps {
-  params: Promise<{ postid: string }>;
-}
+// Revalidate the page every hour
+export const revalidate = 3600;
 
-export async function generateStaticParams() {
-  try {
-    const { data: posts, error } = await supabase.from('posts').select('id');
-
-    if (error) {
-      console.error('Error fetching post IDs:', error);
-      return [];
-    }
-
-    return posts.map((post) => ({
-      postid: post.id.toString(),
-    }));
-  } catch (err) {
-    console.error('Unexpected error in generateStaticParams:', err);
-    return [];
-  }
-}
-
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({ params }: { params: Promise<{ postid: string }> }) {
   const { postid } = await params;
-
-  try {
-    const { data: post, error } = await supabase
-      .from('posts')
-      .select('id, title, content, post_image, created_at, excerpt')
-      .eq('id', postid)
-      .single();
-
-    if (error || !post) {
-      return (
-        <main className="min-h-screen bg-gray-50">
-          <Header />
-          <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Post Not Found</h1>
-            <p className="text-gray-600">
-              We couldn&apos;t find the blog post you&apos;re looking for. Please try again later.
-            </p>
-          </div>
-          <Footer />
-        </main>
-      );
-    }
-
-    return (
+  
+  return (
+    <>
+      <Header />
       <main className="min-h-screen bg-gray-50">
-        <Header />
-        <div className="container mx-auto py-12">
-          <BlogPost post={post} />
+        <BlogPostContent slug={postid} />
+        <div className="max-w-5xl mx-auto px-8 py-12">
+          <RecentBlogPosts />
         </div>
-        <Footer />
       </main>
-    );
-  } catch (err) {
-    console.error('Unexpected error fetching blog post:', err);
-    return (
-      <main className="min-h-screen bg-gray-50">
-        <Header />
-        <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Error</h1>
-          <p className="text-gray-600">
-            Something went wrong. Please try again later.
-          </p>
-        </div>
-        <Footer />
-      </main>
-    );
-  }
+      <Footer />
+    </>
+  );
 }

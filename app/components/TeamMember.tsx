@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface TeamMemberProps {
   name: string;
   role: string;
@@ -9,11 +11,14 @@ const TeamMember = ({ name, role, imageUrl, bio }: TeamMemberProps) => {
   return (
     <div className="flex flex-col lg:flex-row gap-8 p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
       <div className="flex-shrink-0">
-        <div className="w-48 h-48 overflow-hidden rounded-xl">
-          <img
+        <div className="w-48 h-48 overflow-hidden rounded-xl relative">
+          <Image
             src={imageUrl}
             alt={name}
-            className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover"
+            priority={false}
           />
         </div>
       </div>
