@@ -10,15 +10,12 @@ if (!process.env.NEXT_PUBLIC_SANITY_DATASET) {
   throw new Error('Missing NEXT_PUBLIC_SANITY_DATASET environment variable');
 }
 
+
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  apiVersion: '2024-01-01',
-  useCdn: true, // Always use CDN in production
-  perspective: 'published',
-  // Add these options to ensure proper CORS handling
-  withCredentials: false,
-  token: undefined, // Explicitly set to undefined since we don't need it
+  projectId: "ogrc4p6l",
+  dataset: "production",
+  apiVersion: "2024-01-01",
+  useCdn: true,
 });
 
 // Test function to verify Sanity connection

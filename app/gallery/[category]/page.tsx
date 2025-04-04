@@ -2,7 +2,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CategoryGallery from '../../../components/CategoryGallery'
 import { Metadata } from 'next'
-import { client } from '../../sanity/client'
+import { client } from '@/lib/sanity.client'
 import { Gallery } from '@/types/sanity'
 import { notFound } from 'next/navigation'
 

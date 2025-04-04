@@ -6,6 +6,7 @@ interface Service {
   title: string;
   description: string;
   features: string[];
+  link: string;
 }
 
 const services: Service[] = [
@@ -13,31 +14,36 @@ const services: Service[] = [
     image: 'https://lh3.googleusercontent.com/pw/AP1GczPfMijE0zggGn7wGvMgNOpOuudT_e6M-sn7WZqjpn8LlkymZaKSCgQlOEk73x0JKHmjadYrVupXJZ5ly3ImYl0l_bBqk1yCXOD86KbqZFbmVgUzzFcIemiOwdNeCh_ItBuLhr76NGBDhWPDEF3xLyLu=w2014-h1510-s-no-gm?authuser=0',
     title: 'Kitchen Remodeling',
     description: 'Transform your kitchen into a modern, functional space with custom cabinetry, premium countertops, and state-of-the-art appliances.',
-    features: ['Custom Cabinet Design', 'Premium Countertops', 'Modern Appliance Integration', 'Expert Installation']
+    features: ['Custom Cabinet Design', 'Premium Countertops', 'Modern Appliance Integration', 'Expert Installation'],
+    link: '/services/kitchen-remodel'
   },
   {
     image: 'https://lh3.googleusercontent.com/pw/AP1GczMCD_yekUO1Fj7dzM7kxH8ENdLpPGJZm8YWKDsp9KgeLrCFJkbrarR8qJDTP1rib24LWvtxeUCP8xEpDYj1NzK5ZvWT6_B86282tqEQlu0ZnRMIvZRQUKyklNBmWNBuFokf9dllb5bL5fWl6JLjg3Fq=w2014-h1510-s-no-gm?authuser=0',
     title: 'Bathroom Renovation',
     description: 'Create a luxurious and relaxing bathroom oasis with premium fixtures, custom tilework, and elegant design elements.',
-    features: ['Luxury Fixtures', 'Custom Tile Design', 'Modern Vanities', 'Spa-like Amenities']
+    features: ['Luxury Fixtures', 'Custom Tile Design', 'Modern Vanities', 'Spa-like Amenities'],
+    link: '/services/bathroom-remodel'
   },
   {
     image: 'https://lh3.googleusercontent.com/pw/AP1GczO_5Ai5FbytfFKmfc72toLG4U70Rhnv1RUunnoUKHO18a5Ar0GyLDBSsyW-q583Qg8NjQqOPfSXEpIVdp3fA-7-Y9GGMOnBhuMjje3WvzBAozV8PBAr0fMkFm_5f01ORqF95TwJPzbODllLowz2JKif=w1510-h1510-s-no-gm?authuser=0',
     title: 'Custom Cabinetry',
     description: 'Tailor-made cabinets crafted with precision to maximize your storage and enhance your space\'s aesthetic appeal.',
-    features: ['Premium Materials', 'Custom Finishes', 'Innovative Storage', 'Expert Craftsmanship']
+    features: ['Premium Materials', 'Custom Finishes', 'Innovative Storage', 'Expert Craftsmanship'],
+    link: '/services/custom-cabinetry'
   },
   {
     image: 'https://lh3.googleusercontent.com/pw/AP1GczOuElnpkFSfeIAWzE5wxc5VlI_nrOCqOk7jouYtyN3fg-B_MNtdIHFSfxbvA2wsg-uoApjL4UfRIpAtZrLRxFUvGFKtzEq1FerBDY_zQ1A42ticwky6rDMl0IlVdn31iHKmhfgPC_fvpb1ewVyEgSac=w1320-h849-s-no-gm?authuser=0',
     title: 'Flooring and Tile',
     description: 'Choose from a wide range of flooring options and tiles for your kitchen and bathroom.',
-    features: ['Luxury Vinyl Plank', 'Ceramic & Porcelain Tile', 'Natural Stone', 'Professional Installation']
+    features: ['Luxury Vinyl Plank', 'Ceramic & Porcelain Tile', 'Natural Stone', 'Professional Installation'],
+    link: '/services/flooring-tile'
   },
   {
     image: 'https://lh3.googleusercontent.com/pw/AP1GczM1n_yyeN9R02JPlwjtYBHddPHv6URYPFxSepJu95lMFMxY7b_AT0i8NGL26ZQ2c_mSlJGaKfQwNyIFfnA2KaM8QWYOHh5IYyT2BCCJKNl-xrTqSJLLGhe4-pR9yRCLxnhP_rq3obF5S5yl9tR5QEy9=w960-h672-s-no-gm?authuser=0',
     title: 'Space Planning',
     description: 'Optimize your layout for better functionality and flow.',
-    features: ['3D Design Visualization', 'Traffic Flow Analysis', 'Storage Solutions', 'Ergonomic Planning']
+      features: ['3D Design Visualization', 'Traffic Flow Analysis', 'Storage Solutions', 'Ergonomic Planning'],
+    link: '/services/space-planning'
   },
   // {
   //   image: 'https://images.unsplash.com/photo-1581876424484-0d87430585e0?w=800&auto=format&fit=crop',
@@ -109,7 +115,7 @@ export default function ServicesSection() {
                   </ul>
                 )}
 
-                <Link href="/contact" className="group relative inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-orange-600">
+                <Link href={service.link} className="group relative inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-orange-600">
                   <span className="relative z-10">Learn More</span>
                   <ArrowRight className="ml-2 w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />

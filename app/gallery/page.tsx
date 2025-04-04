@@ -1,7 +1,7 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { Metadata } from 'next'
-import { client } from '../sanity/client'
+import { client } from '@/lib/sanity.client'
 import { Gallery, GalleryItem } from '@/types/sanity'
 import Image from 'next/image'
 import Link from 'next/link'
