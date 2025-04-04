@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu } from 'lucide-react'
+import { Menu, ChevronDown } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -9,6 +9,20 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet"
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu"
+
+const services = [
+  { name: 'Kitchen Remodeling', href: '/services/kitchen-remodel' },
+  { name: 'Bathroom Remodeling', href: '/services/bathroom-remodel' },
+  { name: 'Custom Cabinetry', href: '/services/custom-cabinetry' },
+  { name: 'Flooring & Tile', href: '/services/flooring-tile' },
+  { name: 'Space Planning', href: '/services/space-planning' },
+]
 
 export default function Header() {
   return (
@@ -34,6 +48,26 @@ export default function Header() {
               <Link href="/about" className="text-gray-600 hover:text-orange-600 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-orange-600 after:transition-all after:duration-300 hover:after:w-full">
                 About
               </Link>
+            </li>
+            <li className="flex items-center" data-radix-dropdown-menu-trigger-container>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-gray-600 hover:text-orange-500 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full">
+                  Services
+                  <ChevronDown className="h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="start"
+                  className="mt-2"
+                >
+                  {services.map((service) => (
+                    <Link key={service.href} href={service.href}>
+                      <DropdownMenuItem className="cursor-pointer hover:bg-orange-50 hover:text-orange-600">
+                        {service.name}
+                      </DropdownMenuItem>
+                    </Link>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </li>
             <li className="flex items-center">
               <Link href="/gallery" className="text-gray-600 hover:text-orange-600 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-orange-600 after:transition-all after:duration-300 hover:after:w-full">
@@ -70,6 +104,20 @@ export default function Header() {
               <Link href="/about" className="text-gray-600 hover:text-gray-800 relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full">
                 About
               </Link>
+              <div className="space-y-2">
+                <p className="text-gray-600 font-medium">Services</p>
+                <div className="flex flex-col space-y-2 pl-4">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="text-gray-600 hover:text-gray-800 relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <Link href="/gallery" className="text-gray-600 hover:text-gray-800 relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full">
                 Gallery
               </Link>
